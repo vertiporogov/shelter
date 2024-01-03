@@ -4,9 +4,9 @@
             <p class="card-text">{{ object.name }}</p>
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <button href="{% url 'dogs:category_dogs' object.pk %}" type="button"
+                    <a href="{% url 'dogs:category' object.pk %}" type="button"
                             class="btn btn-sm btn-outline-secondary">К собакам
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
