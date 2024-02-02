@@ -20,6 +20,15 @@
                class="btn btn-sm btn-outline-secondary">собаки</a>
             <a href="{% url 'dogs:index' %}" type="button"
                class="btn btn-sm btn-outline-secondary">Главная</a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'users:logout' %}" type="button"
+               class="btn btn-sm btn-outline-secondary">Выход</a>
+            {% else %}
+            <a href="{% url 'users:login' %}" type="button"
+               class="btn btn-sm btn-outline-secondary">Вход</a>
+            <a href="{% url 'users:register' %}" type="button"
+               class="btn btn-sm btn-outline-secondary">Регистрация</a>
+            {% endif %}
 
         </div>
     </div>
