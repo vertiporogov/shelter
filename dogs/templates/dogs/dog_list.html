@@ -4,7 +4,7 @@
 <div class="row">
     {% if perms.dogs.add_dog %}
         <div class="col-12 mb-5">
-            <a class="btn btn-primary" href="#">Добавить собаку</a>
+            <a class="btn btn-primary" href="{% url 'dogs:dog_create' %}">Добавить собаку</a>
         </div>
     {% endif %}
     {% for object in object_list %}
@@ -16,6 +16,7 @@
             <div class="card-body">
                 <p class="card-text">{{ object.name|title }}</p>
                 <span class="text-muted">{{ object.birth_day|default:"-" }}</span><br>
+                <span class="text-muted">{{ object.owner|default:"без хозяина" }}</span>
             </div>
             <div class="card-footer">
                 <a class="btn btn-link" href="{% url 'dogs:dog_update' object.pk %}">Изменить</a>

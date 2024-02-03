@@ -140,3 +140,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 AUTH_USER_MODEL = 'users.User'
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
+
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_HOST_USER = 'vertiporogov.alexandr@mail.ru'
+EMAIL_HOST_PASSWORD = 'KUeWDdk5dqwmtMjjYqKz'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
